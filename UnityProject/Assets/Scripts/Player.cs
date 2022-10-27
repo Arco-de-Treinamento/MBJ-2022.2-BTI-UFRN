@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour{
     private const int maxHealth = 100;
-    public int currentHealth;
+    private int currentHealth;
     public Image lifebar;
     public Image damageBar;
+
+    private bool canTakeDamage;
 
     public float speed;
     public float jumpForce;
@@ -19,19 +22,23 @@ public class Player : MonoBehaviour{
     public float bulletSpeed;
     private float timeLastBullet;
     private Animator animator;
-
+    private SpriteRenderer sprite;
 
     // Start is called before the first frame update
     void Start(){
+        sprite = GetComponent<SpriteRenderer>();
         rigidbody2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         currentHealth = maxHealth;
+        canTakeDamage = true;
     }
 
     // Update is called once per frame
     void Update(){
-        Move();
-        Jump();
+        if(canTakeDamage == true){
+            Move();
+            Jump();
+        }
         Fire();
     }
 
@@ -57,15 +64,43 @@ public class Player : MonoBehaviour{
     void Jump(){
         if (Input.GetButtonDown("Jump") && !isJumping){
             rigidbody2D.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
-            this.setLife(currentHealth - 20);
             }
     }
 
-    public void setLife(int newHealth){
-        if(newHealth >100 || newHealth < 0)
-            return;
+    public void takeDamage(int damage){
+        if(canTakeDamage == true){
+            canTakeDamage = false;
+            StartCoroutine(this.damageCoroutine());
+            setLife(currentHealth - damage);
+        }
+    }
 
-        this.currentHealth = newHealth;
+    IEnumerator damageCoroutine(){
+        for(float i=0;i < 0.6f; i+=0.2f){
+            sprite.enabled = false;
+            yield return new WaitForSeconds(0.05f);
+            sprite.enabled = true;
+            yield return new WaitForSeconds(0.05f);
+        }
+        canTakeDamage = true;
+    }
+
+    public void ReloadScene(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void setLife(int newHealth){
+        if(newHealth >100){
+            return;
+        }
+
+        if(newHealth <= 0){
+            canTakeDamage = false;
+            //ACIONAR ANIMAÇÃO DE MORTO AQUI
+            Invoke("ReloadScene",3f);
+        }
+
+        this.currentHealth = newHealth; 
         Vector3 newLifeBar = lifebar.rectTransform.localScale;
         newLifeBar.x = (float) newHealth / maxHealth;
         lifebar.rectTransform.localScale = newLifeBar;
@@ -77,7 +112,7 @@ public class Player : MonoBehaviour{
         Vector3 redBarScale = this.damageBar.transform.localScale;
 
         while(damageBar.transform.localScale.x > actualLifeBar.x){
-            redBarScale.x -= Time.deltaTime * 0.25f;
+            redBarScale.x -= Time.deltaTime * 0.4f;
             damageBar.transform.localScale = redBarScale;
 
             yield return null;
