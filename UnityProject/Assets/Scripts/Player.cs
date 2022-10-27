@@ -1,8 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour{
+    private const int maxHealth = 100;
+    public int currentHealth;
+    public Image lifebar;
+    public Image damageBar;
+
     public float speed;
     public float jumpForce;
     private bool isJumping;
@@ -19,6 +25,7 @@ public class Player : MonoBehaviour{
     void Start(){
         rigidbody2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        currentHealth = maxHealth;
     }
 
     // Update is called once per frame
@@ -48,8 +55,34 @@ public class Player : MonoBehaviour{
 
     // Pulo simples do personagem
     void Jump(){
-        if (Input.GetButtonDown("Jump") && !isJumping)
+        if (Input.GetButtonDown("Jump") && !isJumping){
             rigidbody2D.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+            this.setLife(currentHealth - 20);
+            }
+    }
+
+    public void setLife(int newHealth){
+        if(newHealth >100 || newHealth < 0)
+            return;
+
+        this.currentHealth = newHealth;
+        Vector3 newLifeBar = lifebar.rectTransform.localScale;
+        newLifeBar.x = (float) newHealth / maxHealth;
+        lifebar.rectTransform.localScale = newLifeBar;
+        StartCoroutine(this.DecreasingRedBar(lifebar.rectTransform.localScale));
+    }
+
+    private IEnumerator DecreasingRedBar(Vector3 actualLifeBar){
+        yield return new WaitForSeconds(0.5f);
+        Vector3 redBarScale = this.damageBar.transform.localScale;
+
+        while(damageBar.transform.localScale.x > actualLifeBar.x){
+            redBarScale.x -= Time.deltaTime * 0.25f;
+            damageBar.transform.localScale = redBarScale;
+
+            yield return null;
+        }
+        damageBar.transform.localScale = actualLifeBar;
     }
 
 
