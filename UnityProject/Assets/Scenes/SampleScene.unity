@@ -471,6 +471,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6555480584104641074, guid: 7fd512df541584d428ba8f850f703e38, type: 3}
+      propertyPath: maxHealth
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555480584104641074, guid: 7fd512df541584d428ba8f850f703e38, type: 3}
+      propertyPath: touchingDamage
+      value: 35
+      objectReference: {fileID: 0}
     - target: {fileID: 6555480584104641076, guid: 7fd512df541584d428ba8f850f703e38, type: 3}
       propertyPath: m_Name
       value: Enemy (1)
@@ -684,6 +692,14 @@ PrefabInstance:
     - target: {fileID: 6555480584104641072, guid: 7fd512df541584d428ba8f850f703e38, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555480584104641074, guid: 7fd512df541584d428ba8f850f703e38, type: 3}
+      propertyPath: maxHealth
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555480584104641074, guid: 7fd512df541584d428ba8f850f703e38, type: 3}
+      propertyPath: touchingDamage
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 6555480584104641076, guid: 7fd512df541584d428ba8f850f703e38, type: 3}
       propertyPath: m_Name
@@ -1400,7 +1416,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 831eb1a3ff2a30740a6278e875b2c927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 0
   lifebar: {fileID: 255278239}
   damageBar: {fileID: 2146529125}
   speed: 5
@@ -1928,6 +1943,18 @@ PrefabInstance:
     - target: {fileID: 6555480584104641072, guid: 7fd512df541584d428ba8f850f703e38, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555480584104641074, guid: 7fd512df541584d428ba8f850f703e38, type: 3}
+      propertyPath: damage
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555480584104641074, guid: 7fd512df541584d428ba8f850f703e38, type: 3}
+      propertyPath: maxHealth
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555480584104641074, guid: 7fd512df541584d428ba8f850f703e38, type: 3}
+      propertyPath: touchingDamage
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 6555480584104641076, guid: 7fd512df541584d428ba8f850f703e38, type: 3}
       propertyPath: m_Name

@@ -5,13 +5,14 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour{
+    //Barra de vida e vida
     private const int maxHealth = 100;
     private int currentHealth;
     public Image lifebar;
     public Image damageBar;
-
     private bool canTakeDamage;
-
+    
+    //Outros
     public float speed;
     public float jumpForce;
     private bool isJumping;
@@ -24,7 +25,6 @@ public class Player : MonoBehaviour{
     private Animator animator;
     private SpriteRenderer sprite;
 
-    // Start is called before the first frame update
     void Start(){
         sprite = GetComponent<SpriteRenderer>();
         rigidbody2D = GetComponent<Rigidbody2D>();
@@ -33,13 +33,21 @@ public class Player : MonoBehaviour{
         canTakeDamage = true;
     }
 
-    // Update is called once per frame
     void Update(){
         if(canTakeDamage == true){
+            Fire();
+            IsAlive();
             Move();
             Jump();
         }
-        Fire();
+    }
+
+    void IsAlive(){
+        if(currentHealth == 0){
+            canTakeDamage = false;
+            //ACIONAR ANIMAÇÃO DE MORTO AQUI
+            Invoke("ReloadScene",3f);
+        }
     }
 
     // Movimentacao lateral do personagem
@@ -60,13 +68,13 @@ public class Player : MonoBehaviour{
         }
     }
 
-    // Pulo simples do personagem
     void Jump(){
         if (Input.GetButtonDown("Jump") && !isJumping){
             rigidbody2D.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
-            }
+        }
     }
 
+    //Método chamado pelos inimigos para dar dano no player
     public void takeDamage(int damage){
         if(canTakeDamage == true){
             canTakeDamage = false;
@@ -75,6 +83,7 @@ public class Player : MonoBehaviour{
         }
     }
 
+    // Faz o personagem piscar ao tomar dano 
     IEnumerator damageCoroutine(){
         for(float i=0;i < 0.6f; i+=0.2f){
             sprite.enabled = false;
@@ -85,28 +94,30 @@ public class Player : MonoBehaviour{
         canTakeDamage = true;
     }
 
+    //Reinicia a fase
     public void ReloadScene(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
+    //Ajusta a vida do personagem (dá para curar por aqui também)
     public void setLife(int newHealth){
         if(newHealth >100){
+            setLife(100);
             return;
         }
-
-        if(newHealth <= 0){
-            canTakeDamage = false;
-            //ACIONAR ANIMAÇÃO DE MORTO AQUI
-            Invoke("ReloadScene",3f);
+        if(newHealth < 0){
+            setLife(0);
+            return;
+        }else{
+            this.currentHealth = newHealth; 
+            Vector3 newLifeBar = lifebar.rectTransform.localScale;
+            newLifeBar.x = (float) newHealth / maxHealth;
+            lifebar.rectTransform.localScale = newLifeBar;
+            StartCoroutine(this.DecreasingRedBar(lifebar.rectTransform.localScale));
         }
-
-        this.currentHealth = newHealth; 
-        Vector3 newLifeBar = lifebar.rectTransform.localScale;
-        newLifeBar.x = (float) newHealth / maxHealth;
-        lifebar.rectTransform.localScale = newLifeBar;
-        StartCoroutine(this.DecreasingRedBar(lifebar.rectTransform.localScale));
     }
 
+    //Diminui a barra vermelha de dano lentamente
     private IEnumerator DecreasingRedBar(Vector3 actualLifeBar){
         yield return new WaitForSeconds(0.5f);
         Vector3 redBarScale = this.damageBar.transform.localScale;
