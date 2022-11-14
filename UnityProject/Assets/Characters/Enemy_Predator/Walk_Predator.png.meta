@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9a28221f947e40f4da1afb29a89bf2b3
+guid: faa8e6eaaa2a1e2419cae019cc63b40a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,117 +117,64 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: atkGun_0
+      name: Walk_Predator_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 5
         y: 0
-        width: 36
-        height: 36
+        width: 28
+        height: 44
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 0, y: -18}
-        - {x: 18, y: 0}
-        - {x: 0, y: 18}
-        - {x: -18, y: 0}
-      physicsShape:
-      - - {x: 0, y: -18}
-        - {x: 18, y: 0}
-        - {x: 0, y: 18}
-        - {x: -18, y: 0}
+      outline: []
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0bb58978424c794993e96d8a6ec5cb1
-      internalID: -202164583
+      spriteID: 70c08a4c9b20bc74e9477e5c9d37c644
+      internalID: -516989491
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: atkGun_1
+      name: Walk_Predator_1
       rect:
         serializedVersion: 2
-        x: 36
+        x: 41
         y: 0
-        width: 36
-        height: 36
+        width: 28
+        height: 45
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 0, y: -18}
-        - {x: 18, y: 0}
-        - {x: 0, y: 18}
-        - {x: -18, y: 0}
-      physicsShape:
-      - - {x: 0, y: -18}
-        - {x: 18, y: 0}
-        - {x: 0, y: 18}
-        - {x: -18, y: 0}
+      outline: []
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 77c179e8ec7236c44ad153b40561083f
-      internalID: -1098623823
+      spriteID: 688e571999f84534d9bc155594c81ebf
+      internalID: 1370008503
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: atkGun_2
+      name: Walk_Predator_2
       rect:
         serializedVersion: 2
-        x: 72
+        x: 77
         y: 0
-        width: 36
-        height: 36
+        width: 28
+        height: 44
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 0, y: -18}
-        - {x: 18, y: 0}
-        - {x: 0, y: 18}
-        - {x: -18, y: 0}
-      physicsShape:
-      - - {x: 0, y: -18}
-        - {x: 18, y: 0}
-        - {x: 0, y: 18}
-        - {x: -18, y: 0}
+      outline: []
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c4cabef54968734aa9ebfb0ebff9303
-      internalID: -1038469566
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: atkGun_3
-      rect:
-        serializedVersion: 2
-        x: 108
-        y: 0
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 0, y: -18}
-        - {x: 18, y: 0}
-        - {x: 0, y: 18}
-        - {x: -18, y: 0}
-      physicsShape:
-      - - {x: 0, y: -18}
-        - {x: 18, y: 0}
-        - {x: 0, y: 18}
-        - {x: -18, y: 0}
-      tessellationDetail: 0
-      bones: []
-      spriteID: cca58f93f25a37743bd41c996db2c029
-      internalID: 1416853058
+      spriteID: 18b62e1857e4a404d8abd9938ea70399
+      internalID: 762508025
       vertices: []
       indices: 
       edges: []
@@ -243,10 +190,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      atkGun_2: -1038469566
-      atkGun_3: 1416853058
-      atkGun_1: -1098623823
-      atkGun_0: -202164583
+      Walk_Predator_2: 762508025
+      Walk_Predator_1: 1370008503
+      Walk_Predator_0: -516989491
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

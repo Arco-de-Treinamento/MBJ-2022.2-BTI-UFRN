@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9a28221f947e40f4da1afb29a89bf2b3
+guid: 533685d8a36568946ad5db6050e2a7ae
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,117 +117,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: atkGun_0
+      name: Idle_Predator_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 5
         y: 0
-        width: 36
-        height: 36
+        width: 28
+        height: 44
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 0, y: -18}
-        - {x: 18, y: 0}
-        - {x: 0, y: 18}
-        - {x: -18, y: 0}
-      physicsShape:
-      - - {x: 0, y: -18}
-        - {x: 18, y: 0}
-        - {x: 0, y: 18}
-        - {x: -18, y: 0}
+      outline: []
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0bb58978424c794993e96d8a6ec5cb1
-      internalID: -202164583
+      spriteID: fb322c27c791da842bf638b854a26ebb
+      internalID: -301605704
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: atkGun_1
+      name: Idle_Predator_1
       rect:
         serializedVersion: 2
-        x: 36
+        x: 41
         y: 0
-        width: 36
-        height: 36
+        width: 28
+        height: 44
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 0, y: -18}
-        - {x: 18, y: 0}
-        - {x: 0, y: 18}
-        - {x: -18, y: 0}
-      physicsShape:
-      - - {x: 0, y: -18}
-        - {x: 18, y: 0}
-        - {x: 0, y: 18}
-        - {x: -18, y: 0}
+      outline: []
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 77c179e8ec7236c44ad153b40561083f
-      internalID: -1098623823
+      spriteID: cf32790e7dcc89d49aa79e520fb0dffe
+      internalID: -1540220658
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: atkGun_2
+      name: Idle_Predator_2
       rect:
         serializedVersion: 2
-        x: 72
+        x: 77
         y: 0
-        width: 36
-        height: 36
+        width: 28
+        height: 44
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 0, y: -18}
-        - {x: 18, y: 0}
-        - {x: 0, y: 18}
-        - {x: -18, y: 0}
-      physicsShape:
-      - - {x: 0, y: -18}
-        - {x: 18, y: 0}
-        - {x: 0, y: 18}
-        - {x: -18, y: 0}
+      outline: []
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c4cabef54968734aa9ebfb0ebff9303
-      internalID: -1038469566
+      spriteID: 03bd6f4a80168544998cc8a504573a82
+      internalID: -314941619
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: atkGun_3
+      name: Idle_Predator_3
       rect:
         serializedVersion: 2
-        x: 108
+        x: 113
         y: 0
-        width: 36
-        height: 36
+        width: 28
+        height: 45
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 0, y: -18}
-        - {x: 18, y: 0}
-        - {x: 0, y: 18}
-        - {x: -18, y: 0}
-      physicsShape:
-      - - {x: 0, y: -18}
-        - {x: 18, y: 0}
-        - {x: 0, y: 18}
-        - {x: -18, y: 0}
+      outline: []
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cca58f93f25a37743bd41c996db2c029
-      internalID: 1416853058
+      spriteID: ec5b3aaafbe04b644b218c28d81742b4
+      internalID: 1205220608
       vertices: []
       indices: 
       edges: []
@@ -243,10 +211,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      atkGun_2: -1038469566
-      atkGun_3: 1416853058
-      atkGun_1: -1098623823
-      atkGun_0: -202164583
+      Idle_Predator_2: -314941619
+      Idle_Predator_3: 1205220608
+      Idle_Predator_1: -1540220658
+      Idle_Predator_0: -301605704
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

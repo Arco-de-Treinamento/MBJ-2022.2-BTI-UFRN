@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9a28221f947e40f4da1afb29a89bf2b3
+guid: 77c9c681993db49409018ddff2b34659
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,117 +117,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: atkGun_0
+      name: Death_Cacto_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1
         y: 0
-        width: 36
-        height: 36
+        width: 21
+        height: 23
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 0, y: -18}
-        - {x: 18, y: 0}
-        - {x: 0, y: 18}
-        - {x: -18, y: 0}
-      physicsShape:
-      - - {x: 0, y: -18}
-        - {x: 18, y: 0}
-        - {x: 0, y: 18}
-        - {x: -18, y: 0}
+      outline: []
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0bb58978424c794993e96d8a6ec5cb1
-      internalID: -202164583
+      spriteID: 7227c51d9f9bb3346a740382a5b4e77d
+      internalID: -701622442
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: atkGun_1
+      name: Death_Cacto_1
       rect:
         serializedVersion: 2
-        x: 36
+        x: 25
         y: 0
-        width: 36
-        height: 36
+        width: 21
+        height: 22
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 0, y: -18}
-        - {x: 18, y: 0}
-        - {x: 0, y: 18}
-        - {x: -18, y: 0}
-      physicsShape:
-      - - {x: 0, y: -18}
-        - {x: 18, y: 0}
-        - {x: 0, y: 18}
-        - {x: -18, y: 0}
+      outline: []
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 77c179e8ec7236c44ad153b40561083f
-      internalID: -1098623823
+      spriteID: 9bc257509b27ec24983745ec3039f0f2
+      internalID: 2071120226
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: atkGun_2
+      name: Death_Cacto_2
       rect:
         serializedVersion: 2
-        x: 72
+        x: 49
         y: 0
-        width: 36
-        height: 36
+        width: 21
+        height: 22
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 0, y: -18}
-        - {x: 18, y: 0}
-        - {x: 0, y: 18}
-        - {x: -18, y: 0}
-      physicsShape:
-      - - {x: 0, y: -18}
-        - {x: 18, y: 0}
-        - {x: 0, y: 18}
-        - {x: -18, y: 0}
+      outline: []
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c4cabef54968734aa9ebfb0ebff9303
-      internalID: -1038469566
+      spriteID: 6b09e92dcb7ce6449b198c3698dcbb37
+      internalID: -807431986
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: atkGun_3
+      name: Death_Cacto_3
       rect:
         serializedVersion: 2
-        x: 108
+        x: 73
         y: 0
-        width: 36
-        height: 36
+        width: 21
+        height: 22
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 0, y: -18}
-        - {x: 18, y: 0}
-        - {x: 0, y: 18}
-        - {x: -18, y: 0}
-      physicsShape:
-      - - {x: 0, y: -18}
-        - {x: 18, y: 0}
-        - {x: 0, y: 18}
-        - {x: -18, y: 0}
+      outline: []
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cca58f93f25a37743bd41c996db2c029
-      internalID: 1416853058
+      spriteID: 500dca24b1278e44aa32629e5add6d82
+      internalID: -888672003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_Cacto_5
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 0
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cd16090fa1f6b64cb0f23332b9fb2c6
+      internalID: -1085243338
       vertices: []
       indices: 
       edges: []
@@ -243,10 +232,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      atkGun_2: -1038469566
-      atkGun_3: 1416853058
-      atkGun_1: -1098623823
-      atkGun_0: -202164583
+      Death_Cacto_0: -701622442
+      Death_Cacto_1: 2071120226
+      Death_Cacto_5: -1085243338
+      Death_Cacto_2: -807431986
+      Death_Cacto_6: 1799577273
+      Death_Cacto_3: -888672003
+      Death_Cacto_4: -1057882894
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

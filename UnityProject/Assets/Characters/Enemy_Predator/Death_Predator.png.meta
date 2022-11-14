@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9a28221f947e40f4da1afb29a89bf2b3
+guid: f11a77ed17d86b04ab5936ae459fef2d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,117 +117,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: atkGun_0
+      name: Death_Predator_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 5
         y: 0
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 28
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 0, y: -18}
-        - {x: 18, y: 0}
-        - {x: 0, y: 18}
-        - {x: -18, y: 0}
-      physicsShape:
-      - - {x: 0, y: -18}
-        - {x: 18, y: 0}
-        - {x: 0, y: 18}
-        - {x: -18, y: 0}
+      outline: []
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0bb58978424c794993e96d8a6ec5cb1
-      internalID: -202164583
+      spriteID: 435c476e67cabb048ae7874547c363c9
+      internalID: 1991761774
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: atkGun_1
+      name: Death_Predator_1
       rect:
         serializedVersion: 2
-        x: 36
+        x: 40
         y: 0
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 28
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 0, y: -18}
-        - {x: 18, y: 0}
-        - {x: 0, y: 18}
-        - {x: -18, y: 0}
-      physicsShape:
-      - - {x: 0, y: -18}
-        - {x: 18, y: 0}
-        - {x: 0, y: 18}
-        - {x: -18, y: 0}
+      outline: []
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 77c179e8ec7236c44ad153b40561083f
-      internalID: -1098623823
+      spriteID: 0a3a19b6170876c45b3596a3175ff211
+      internalID: -626249607
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: atkGun_2
+      name: Death_Predator_2
       rect:
         serializedVersion: 2
-        x: 72
+        x: 76
         y: 0
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 28
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 0, y: -18}
-        - {x: 18, y: 0}
-        - {x: 0, y: 18}
-        - {x: -18, y: 0}
-      physicsShape:
-      - - {x: 0, y: -18}
-        - {x: 18, y: 0}
-        - {x: 0, y: 18}
-        - {x: -18, y: 0}
+      outline: []
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c4cabef54968734aa9ebfb0ebff9303
-      internalID: -1038469566
+      spriteID: 26168dddf68c33549b8817f51b000aca
+      internalID: 1681118009
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: atkGun_3
+      name: Death_Predator_3
       rect:
         serializedVersion: 2
-        x: 108
+        x: 112
         y: 0
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 28
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 0, y: -18}
-        - {x: 18, y: 0}
-        - {x: 0, y: 18}
-        - {x: -18, y: 0}
-      physicsShape:
-      - - {x: 0, y: -18}
-        - {x: 18, y: 0}
-        - {x: 0, y: 18}
-        - {x: -18, y: 0}
+      outline: []
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cca58f93f25a37743bd41c996db2c029
-      internalID: 1416853058
+      spriteID: fe14fd9c570c018409d0ef3e8ed9e7ab
+      internalID: 932680222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_Predator_8
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 1
+        width: 28
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2bd7888b4a5d404dae4ddb691e8ce17
+      internalID: -44269960
       vertices: []
       indices: 
       edges: []
@@ -243,10 +232,19 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      atkGun_2: -1038469566
-      atkGun_3: 1416853058
-      atkGun_1: -1098623823
-      atkGun_0: -202164583
+      Death_Predator_12: 1170353527
+      Death_Predator_4: 821548725
+      Death_Predator_7: 1251978496
+      Death_Predator_9: -1767469526
+      Death_Predator_0: 1991761774
+      Death_Predator_8: -44269960
+      Death_Predator_3: 932680222
+      Death_Predator_6: -1748210944
+      Death_Predator_2: 1681118009
+      Death_Predator_10: 1483836968
+      Death_Predator_5: 1251620940
+      Death_Predator_11: -439633342
+      Death_Predator_1: -626249607
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
