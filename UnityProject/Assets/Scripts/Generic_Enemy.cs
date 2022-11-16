@@ -8,6 +8,7 @@ public class Generic_Enemy : MonoBehaviour{
     private Vector3 playerDistance;
     public int maxHealth = 5;
     public int touchingDamage;
+    private Player playerCollision;
 
     void Start(){
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -33,13 +34,13 @@ public class Generic_Enemy : MonoBehaviour{
 
     //causa dano no player e joga ele para trás
     private void OnCollisionEnter2D(Collision2D collision){
-        Player player = collision.gameObject.GetComponent<Player>();
-        if( player != null){
+        playerCollision = collision.gameObject.GetComponent<Player>();
+        if( playerCollision != null){
             //causa dano de encostar no player
-            player.takeDamage(this.touchingDamage);
+            playerCollision.takeDamage(this.touchingDamage);
 
             //Joga o player para trás
-            player.GetComponent<Rigidbody2D>().AddForce(Vector2.right * 8 * (playerDistance.x / Mathf.Abs(playerDistance.x)),ForceMode2D.Impulse);
+            playerCollision.GetComponent<Rigidbody2D>().AddForce(Vector2.right * 8 * (playerDistance.x / Mathf.Abs(playerDistance.x)),ForceMode2D.Impulse);
         }
     }
 

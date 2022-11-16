@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - Cachaca
   layers:
   - Default
   - TransparentFX
@@ -13,10 +14,10 @@ TagManager:
   - Water
   - UI
   - 
-  - Enemy
   - 
-  - Ground Layer 1
-  - Ground Layer 2
+  - 
+  - 
+  - 
   - 
   - 
   - 
