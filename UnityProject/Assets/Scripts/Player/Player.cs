@@ -24,8 +24,11 @@ public class Player : MonoBehaviour{
     public float speed;
     public float jumpForce;
     private bool isJumping;
+    public Transform groundCheck;
+    public LayerMask groundLayer;
     private bool isFacingRight = true;
-    private new Rigidbody2D rigidbody2D;
+    private Rigidbody2D rigidbody2D;
+    
     public Transform bulletPoint;
     public GameObject bulletPrefab;
     public float bulletSpeed;
@@ -79,7 +82,9 @@ public class Player : MonoBehaviour{
     }
 
     void Jump(){
-        if (Input.GetButtonDown("Jump") && !isJumping){
+        isJumping = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+
+        if (Input.GetButtonDown("Jump") && isJumping){
             rigidbody2D.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
         }
     }
@@ -169,13 +174,13 @@ public class Player : MonoBehaviour{
     // Deteccao de entrada do colisor do personagem
     void OnCollisionEnter2D(Collision2D collision2D){
         // Ground(Layer 10)
-        if(collision2D.gameObject.layer == 10) isJumping = false;
+        // if(collision2D.gameObject.layer == 10) isJumping = false;
         
     }
 
-    // Deteccao de saida do colisor do personagem
+    //Deteccao de saida do colisor do personagem
     void OnCollisionExit2D(Collision2D collision2D){
         // Ground(Layer 10)
-        if(collision2D.gameObject.layer == 10) isJumping = true;
+        // if(collision2D.gameObject.layer == 10) isJumping = true;
     }
 }
