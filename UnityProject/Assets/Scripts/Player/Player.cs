@@ -83,7 +83,7 @@ public class Player : MonoBehaviour{
 
     // Metodo chamado para verificar a colisão com elementos moveis
     void pushElement(){
-        isPush = Physics2D.OverlapCircle(boxCheck.position, 0.2f, boxLayer);
+        isPush = Physics2D.OverlapCircle(boxCheck.position, 0.1f, boxLayer);
         animator.SetBool("isPush", isPush);
     }
 
