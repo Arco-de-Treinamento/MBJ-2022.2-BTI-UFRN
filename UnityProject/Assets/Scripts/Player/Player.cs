@@ -22,13 +22,16 @@ public class Player : MonoBehaviour{
     
     //Outros
     public float speed;
+    private float axisMovement;
+    private bool isFacingRight = true;
     public float jumpForce;
     private bool isJumping;
     public Transform groundCheck;
     public LayerMask groundLayer;
-    private bool isFacingRight = true;
+    private bool isPush;
+    public Transform boxCheck;
+    public LayerMask boxLayer;
     private Rigidbody2D rigidbody2D;
-    
     public Transform bulletPoint;
     public GameObject bulletPrefab;
     public float bulletSpeed;
@@ -52,6 +55,7 @@ public class Player : MonoBehaviour{
             IsAlive();
             Move();
             Jump();
+            pushElement();
         }
     }
 
@@ -65,24 +69,29 @@ public class Player : MonoBehaviour{
 
     // Movimentacao lateral do personagem
     void Move(){
-        Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);
+        axisMovement = Input.GetAxis("Horizontal");
+        Vector3 movement = new Vector3(axisMovement, 0f, 0f);
+
         transform.position += movement * Time.deltaTime * speed;
+        animator.SetFloat("Speed", Mathf.Abs(axisMovement));
 
-        // Rotacionando personagem para a direita
-        if(Input.GetAxis("Horizontal") > 0f){
-            isFacingRight = true;
-            transform.eulerAngles = new Vector3(0f, 0f, 0f);
+        if(((axisMovement < 0) && isFacingRight) || ((axisMovement > 0) && !isFacingRight)){
+            isFacingRight = !isFacingRight;
+            transform.Rotate(0f, 180f, 0f);
         }
+    }
 
-        // Rotacionando personagem para a esquerda
-        if(Input.GetAxis("Horizontal") < 0f){
-            isFacingRight = false;
-            transform.eulerAngles = new Vector3(0f, 180f, 0f);
-        }
+    // Metodo chamado para verificar a colisão com elementos moveis
+    void pushElement(){
+        isPush = Physics2D.OverlapCircle(boxCheck.position, 0.2f, boxLayer);
+        animator.SetBool("isPush", isPush);
     }
 
     void Jump(){
         isJumping = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+
+        animator.SetBool("checkGround", isJumping);
+        animator.SetFloat("jumpSpeed", rigidbody2D.velocity.y);
 
         if (Input.GetButtonDown("Jump") && isJumping){
             rigidbody2D.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
@@ -170,17 +179,5 @@ public class Player : MonoBehaviour{
             //if(timeLastBullet <= 0) animator.SetBool("isAtk", false);
         }
     }
-
-    // Deteccao de entrada do colisor do personagem
-    void OnCollisionEnter2D(Collision2D collision2D){
-        // Ground(Layer 10)
-        // if(collision2D.gameObject.layer == 10) isJumping = false;
-        
-    }
-
-    //Deteccao de saida do colisor do personagem
-    void OnCollisionExit2D(Collision2D collision2D){
-        // Ground(Layer 10)
-        // if(collision2D.gameObject.layer == 10) isJumping = true;
-    }
 }
+   
