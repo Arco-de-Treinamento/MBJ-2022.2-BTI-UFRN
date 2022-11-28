@@ -62,7 +62,12 @@ public class Player : MonoBehaviour{
     void IsAlive(){
         if(currentHealth == 0){
             canTakeDamage = false;
-            //ACIONAR ANIMAÇÃO DE MORTO AQUI
+
+            animator.SetTrigger("isDead");
+            rigidbody2D.velocity = Vector2.zero;
+            rigidbody2D.bodyType = RigidbodyType2D.Kinematic;
+            GetComponent<BoxCollider2D>().enabled = false;
+
             Invoke("ReloadScene",3f);
         }
     }
@@ -161,7 +166,7 @@ public class Player : MonoBehaviour{
         if(Input.GetButtonDown("Fire1") && balaController.getQuantidadeBala() > 0){
             balaController.atirar();
             // Controle de animacao
-            //animator.SetBool("isAtk", true);
+            animator.SetTrigger("isAtkRifle");
             timeLastBullet = 0.5f;
 
             // Cria a bala no bulletPoint quando é acionado o disparo
@@ -176,7 +181,6 @@ public class Player : MonoBehaviour{
 
             // Controle de animacao
             timeLastBullet -= Time.deltaTime;
-            //if(timeLastBullet <= 0) animator.SetBool("isAtk", false);
         }
     }
 }
