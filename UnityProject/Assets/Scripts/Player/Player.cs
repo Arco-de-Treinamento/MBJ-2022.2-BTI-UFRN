@@ -38,6 +38,7 @@ public class Player : MonoBehaviour{
     private float timeLastBullet;
     private Animator animator;
     private SpriteRenderer sprite;
+    private bool usandoArma;
 
     void Start(){
         this.cachacaController = new CachacaController(cachacaText);
@@ -47,6 +48,7 @@ public class Player : MonoBehaviour{
         animator = GetComponent<Animator>();
         currentHealth = maxHealth;
         canTakeDamage = true;
+        usandoArma = false;
     }
 
     void Update(){
@@ -65,6 +67,9 @@ public class Player : MonoBehaviour{
             if(cachacaController.useCachaca()){
                 this.setLife(currentHealth + 20);
             }
+        }
+        if(Input.GetKeyDown(KeyCode.Q)){
+            this.usandoArma = !(this.usandoArma);
         }
     }
 
@@ -172,7 +177,7 @@ public class Player : MonoBehaviour{
 
     // Ataque simples com arma
     void Fire(){
-        if(Input.GetButtonDown("Fire1") && balaController.getQuantidadeBala() > 0){
+        if(Input.GetButtonDown("Fire1") && balaController.getQuantidadeBala() > 0 && usandoArma){
             balaController.atirar();
             // Controle de animacao
             animator.SetTrigger("isAtkRifle");
@@ -190,6 +195,9 @@ public class Player : MonoBehaviour{
 
             // Controle de animacao
             timeLastBullet -= Time.deltaTime;
+        }
+        if(Input.GetButtonDown("Fire1") && !(usandoArma)){
+            GetComponentInChildren<Sword>(true).attack();
         }
     }
 }

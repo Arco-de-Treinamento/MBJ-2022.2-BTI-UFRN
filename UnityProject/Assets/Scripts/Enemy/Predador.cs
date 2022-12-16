@@ -106,7 +106,7 @@ public class Predador : MonoBehaviour
         }
     }
 
-     private void destroyBody(){
+     public void destroyBody(){
         Destroy(gameObject);
     }
 

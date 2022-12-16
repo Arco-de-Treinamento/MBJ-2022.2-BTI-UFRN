@@ -98,7 +98,7 @@ public class Alien : MonoBehaviour{
         }
     }
 
-     private void destroyBody(){
+     public void destroyBody(){
         Destroy(gameObject);
     }
 
