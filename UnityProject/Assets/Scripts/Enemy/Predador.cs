@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Alien : MonoBehaviour{
+public class Predador : MonoBehaviour
+{
     [SerializeField]
     private Rigidbody2D rigidbody2D;
 
@@ -30,6 +31,12 @@ public class Alien : MonoBehaviour{
     private Bullet bulletCollision;
     private Animator animator;
 
+    public Transform bulletPoint;
+    public GameObject bulletPrefab;
+    public float bulletSpeed;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,7 +46,7 @@ public class Alien : MonoBehaviour{
         rigidbody2D = GetComponent<Rigidbody2D>();
 
         this.currentHealth = maxHealth;
-        this.attackDamage = 45;
+        this.attackDamage = 38;
 
         isAttack = false;
     }
@@ -57,13 +64,14 @@ public class Alien : MonoBehaviour{
 
         playerDistance = player.transform.position - transform.position;
     }
-    
+
     private void OnTriggerEnter2D(Collider2D collision){
         playerCollision = collision.gameObject.GetComponent<Player>();
-
-        if(playerCollision != null){ isAttack = true; } 
+        if(playerCollision != null){ 
+            isAttack = true; 
+            Fire();         
+        } 
     }
-
 
     public void follow(){
         RaycastHit2D ground = Physics2D.Raycast(groundCheck.position, Vector2.down, distanceGround);
@@ -108,7 +116,6 @@ public class Alien : MonoBehaviour{
 
         if( playerCollision != null){
             //causa dano de encostar no player
-            animator.SetTrigger("isAtk");
             playerCollision.takeDamage(this.attackDamage);
 
             //Joga o player para trás
@@ -119,4 +126,22 @@ public class Alien : MonoBehaviour{
             TakeDamage(4);
         }
     }
+
+     void Fire(){
+        
+        // Controle de animacao
+        animator.SetTrigger("isAtk");
+
+        // Cria a bala no bulletPoint quando é acionado o disparo
+        GameObject bulletObject = Instantiate(bulletPrefab, bulletPoint.position, transform.rotation);
+
+        // Determina a direcao do projeto com base na direcao do personagem
+        if(paraEsquerda){
+            bulletObject.GetComponent<Rigidbody2D>().velocity = new Vector2(-bulletSpeed, 0f);
+        }else{
+            bulletObject.GetComponent<Rigidbody2D>().velocity = new Vector2(bulletSpeed, 0f);
+        }
+        
+    }
+
 }

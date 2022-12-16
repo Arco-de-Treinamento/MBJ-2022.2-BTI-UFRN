@@ -1,0 +1,30 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class BulletPredador : MonoBehaviour{
+    public int damage;
+    public float distance;
+    public LayerMask enemyLayer;
+    public string enemyTag;
+
+    public float time;
+    void Start() {
+        Invoke("DestroyBullet", time);    
+    }
+    // Update is called once per frame
+    void Update(){
+        RaycastHit2D bulletCast = Physics2D.Raycast(transform.position, transform.forward, distance, enemyLayer);
+
+        if(bulletCast.collider != null){
+            if(bulletCast.collider.CompareTag(enemyTag)){
+                bulletCast.collider.GetComponent<Player>().takeDamage(damage);
+            }
+            DestroyBullet();
+        }
+    }
+
+    public void DestroyBullet(){
+        Destroy(gameObject);
+    }
+}
