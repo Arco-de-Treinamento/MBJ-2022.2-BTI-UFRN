@@ -11695,9 +11695,9 @@ GameObject:
   - component: {fileID: 82561319}
   - component: {fileID: 82561318}
   - component: {fileID: 82561321}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Predador
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13560,13 +13560,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 471080292}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BulletPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &471080292
 Transform:
   m_ObjectHideFlags: 0
@@ -16111,7 +16111,7 @@ GameObject:
   - component: {fileID: 1669036563}
   m_Layer: 8
   m_Name: Alien
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16630,7 +16630,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2015324185}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17180,11 +17180,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2877025164530760616, guid: 2e5ab832ef930f54eb4bcfcbc731a507, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -702.82
+      value: -709.59
       objectReference: {fileID: 0}
     - target: {fileID: 2877025164530760616, guid: 2e5ab832ef930f54eb4bcfcbc731a507, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -96.62
+      value: -96.24
       objectReference: {fileID: 0}
     - target: {fileID: 2877025164530760616, guid: 2e5ab832ef930f54eb4bcfcbc731a507, type: 3}
       propertyPath: m_LocalPosition.z

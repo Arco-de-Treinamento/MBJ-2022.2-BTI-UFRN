@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,7 +19,21 @@ public class Bullet : MonoBehaviour{
 
         if(bulletCast.collider != null){
             if(bulletCast.collider.CompareTag(enemyTag)){
-                bulletCast.collider.GetComponent<CactoVerde>().TakeDamage(damage);
+                try{
+                    bulletCast.collider.GetComponent<CactoVerde>().TakeDamage(damage);
+                }catch(Exception e){
+
+                }
+                try{
+                    bulletCast.collider.GetComponent<Predador>().TakeDamage(damage);
+                }catch(Exception e){
+                    
+                }
+                try{
+                    bulletCast.collider.GetComponent<Alien>().TakeDamage(damage);
+                }catch(Exception e){
+                    
+                }
             }
             DestroyBullet();
         }
