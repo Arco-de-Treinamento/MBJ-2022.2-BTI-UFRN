@@ -197,6 +197,7 @@ public class Player : MonoBehaviour{
             timeLastBullet -= Time.deltaTime;
         }
         if(Input.GetButtonDown("Fire1") && !(usandoArma)){
+            animator.SetTrigger("isAtkPunhal");
             GetComponentInChildren<Sword>(true).attack();
         }
     }

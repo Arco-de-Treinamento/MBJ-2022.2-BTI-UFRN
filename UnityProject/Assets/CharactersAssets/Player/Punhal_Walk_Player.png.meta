@@ -102,23 +102,11 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Android
+    buildTarget: Windows Store Apps
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -137,14 +125,14 @@ TextureImporter:
         width: 32
         height: 36
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0034fe4dab003a4d901e108ff74a5c1
-      internalID: -1511290727
+      spriteID: 5d05603ea3ad13346afc4b4689464d80
+      internalID: -1702873171
       vertices: []
       indices: 
       edges: []
@@ -158,14 +146,14 @@ TextureImporter:
         width: 31
         height: 36
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 572507a06047fc741b60cf8c8363b350
-      internalID: -833261366
+      spriteID: b1d53e8ec2ca2d844ba4d2097769b00d
+      internalID: 74546160
       vertices: []
       indices: 
       edges: []
@@ -179,14 +167,14 @@ TextureImporter:
         width: 31
         height: 36
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7000e82139000047b714ca1fa566874
-      internalID: -1220185543
+      spriteID: e344e2874be7e7244899340f1005bed0
+      internalID: 2124888599
       vertices: []
       indices: 
       edges: []
@@ -202,9 +190,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Punhal_Walk_Player_2: -1220185543
-      Punhal_Walk_Player_1: -833261366
-      Punhal_Walk_Player_0: -1511290727
+      Punhal_Walk_Player_2: 2124888599
+      Punhal_Walk_Player_1: 74546160
+      Punhal_Walk_Player_0: -1702873171
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
