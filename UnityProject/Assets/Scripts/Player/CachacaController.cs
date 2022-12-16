@@ -22,4 +22,10 @@ public class CachacaController{
         this.setQuantidadeCachaca(this.quantidadeCachaca + increaseCachaca);
     }
 
+    public bool useCachaca(){
+        if(quantidadeCachaca <= 0) return false;
+        setQuantidadeCachaca(quantidadeCachaca - 1);
+        return true;
+    }
+
 }

@@ -56,6 +56,15 @@ public class Player : MonoBehaviour{
             Move();
             Jump();
             pushElement();
+            checkButtons();
+        }
+    }
+
+    private void checkButtons(){
+        if(Input.GetKeyDown(KeyCode.E)){
+            if(cachacaController.useCachaca()){
+                this.setLife(currentHealth + 20);
+            }
         }
     }
 
